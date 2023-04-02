@@ -27,6 +27,7 @@ Make sure to replace the values of the required variables in the script before r
 Script A: Replacing media
 
 The first script in the main function (main()) is responsible for replacing the media of each message within the specified range of message IDs. It selects a random media file from the media_files list, uploads it to Telegram using the upload_file() method of the TelegramClient, and creates an InputMedia object with the appropriate type (InputMediaUploadedPhoto for images and InputMediaUploadedDocument for videos). It then uses the EditMessageRequest method of the TelegramClient to edit the message with the new media.
+
 Script B: Replacing captions
 
 The second script in the main function is responsible for replacing the captions of each message within the specified range of message IDs. It retrieves the message using the get_messages() method of the TelegramClient, checks if it has media (photo or video), and replaces the caption with caption_text using the edit_message() method of the TelegramClient. If the message has no media, the script simply skips it.
